@@ -1,7 +1,9 @@
 package dev.iraelie.eventhive.model;
 
 import jakarta.persistence.Entity;
+import lombok.Getter;
 
+@Getter
 @Entity
 public class Hall {
     private Long id;
