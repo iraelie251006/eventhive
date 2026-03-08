@@ -6,4 +6,5 @@ import lombok.Builder;
 @Builder
 @Entity
 public class Ticket {
+    private Long id;
 }
