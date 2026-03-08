@@ -1,6 +1,7 @@
 package dev.iraelie.eventhive.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,6 +11,7 @@ import lombok.Setter;
 @Builder
 @Entity
 public class Hall {
+    @Id
     private Long id;
     private Long venueId;
     private String name;
