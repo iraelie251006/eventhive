@@ -11,4 +11,5 @@ import lombok.Setter;
 @Entity
 public class Event {
     private Long id;
+    private String name;
 }
