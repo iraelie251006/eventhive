@@ -3,11 +3,13 @@ package dev.iraelie.eventhive.model;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
 @Builder
+@RequiredArgsConstructor
 @Entity
 @Table(name = "users")
 public class User {
