@@ -6,12 +6,14 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import java.util.Set;
 
 @Getter
 @Setter
+@RequiredArgsConstructor
 @Builder
 @Entity
 public class Venue {
