@@ -9,7 +9,6 @@ import lombok.*;
 @Getter
 @Setter
 @RequiredArgsConstructor
-@NoArgsConstructor
 @Builder
 @Entity
 public class Event {
