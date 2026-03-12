@@ -16,4 +16,5 @@ public class Ticket {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long eventId;
+    private Long venueId;
 }
