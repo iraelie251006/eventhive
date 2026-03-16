@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
+import java.util.Set;
+
 @Getter
 @Setter
 @Builder
@@ -19,5 +21,7 @@ public class User {
     private String firstName;
     private String lastName;
     private String email;
+    private String password;
     private Role role;
+    private Set<Event> events;
 }
