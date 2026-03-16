@@ -18,5 +18,4 @@ public class Hall {
     private Long venueId;
     private String name;
     private Long capacity;
-    private Long event_id;
 }
