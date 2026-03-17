@@ -17,11 +17,18 @@ public class EventSeat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long eventId;
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private Ticket ticketId;
-    private Long seatId;
+
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "seatId")
+    private Seat seatId;
+
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "eventId")
+    private Event eventId;
+
     private EventSeatStatus status;
     private BigDecimal price;
 }
