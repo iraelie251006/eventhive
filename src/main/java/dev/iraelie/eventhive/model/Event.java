@@ -19,7 +19,11 @@ public class Event {
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
     @JoinColumn(name = "userId")
     private Long userId;
+
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "hallId")
     private Long hallId;
+
     private String name;
     private String description;
     private LocalDate date;
