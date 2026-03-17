@@ -3,6 +3,8 @@ package dev.iraelie.eventhive.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Getter
 @Setter
 @RequiredArgsConstructor
@@ -19,6 +21,9 @@ public class Hall {
 
     @OneToMany(mappedBy = "hallId", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
     private Long eventId;
+
     private String name;
-    private Long capacity;
+
+    @OneToMany(mappedBy = "hallId", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Seat> seats;
 }
