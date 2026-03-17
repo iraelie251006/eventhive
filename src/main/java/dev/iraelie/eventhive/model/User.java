@@ -24,6 +24,6 @@ public class User {
     private String password;
     private Role role;
 
-    @OneToMany
-    private Set<Event> events;
+    @OneToMany(mappedBy = "userId", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private Set<Event> userEvent;
 }
