@@ -24,6 +24,9 @@ public class User {
     private String password;
     private Role role;
 
+    @OneToMany(mappedBy = "userId", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Ticket> tickets;
+
     @OneToMany(mappedBy = "userId", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Set<Event> userEvent;
 }
