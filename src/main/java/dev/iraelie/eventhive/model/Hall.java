@@ -12,6 +12,9 @@ public class Hall {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "venueId")
     private Long venueId;
 
     @OneToMany(mappedBy = "hallId", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
