@@ -1,9 +1,6 @@
 package dev.iraelie.eventhive.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -21,6 +18,9 @@ public class EventSeat {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long eventId;
+
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private Ticket ticketId;
     private Long seatId;
     private EventSeatStatus status;
     private BigDecimal price;

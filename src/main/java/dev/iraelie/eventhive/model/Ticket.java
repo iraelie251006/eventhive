@@ -18,7 +18,9 @@ public class Ticket {
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
     @JoinColumn(name = "userId")
     private Long userId;
-    private Long eventSeatId;
+
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+    private EventSeat eventSeatId;
     private TicketStatus status;
     private LocalDateTime createdAt;
 }
