@@ -7,8 +7,7 @@ import java.util.List;
 
 @Getter
 @Setter
-@RequiredArgsConstructor
-@Builder
+@NoArgsConstructor
 @Entity
 public class Hall {
     @Id
