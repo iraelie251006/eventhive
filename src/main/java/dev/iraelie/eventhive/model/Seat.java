@@ -1,17 +1,13 @@
 package dev.iraelie.eventhive.model;
 
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
 @Getter
 @Setter
-@RequiredArgsConstructor
-@Builder
+@NoArgsConstructor
 @Entity
 public class Seat {
     @Id
