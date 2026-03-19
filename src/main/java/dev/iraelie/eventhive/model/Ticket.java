@@ -18,9 +18,9 @@ public class Ticket {
     @JoinColumn(name = "user")
     private User user;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "eventSeatId")
-    private EventSeat eventSeatId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "event_seat")
+    private EventSeat eventSeat;
 
     @Enumerated(EnumType.STRING)
     private TicketStatus status;
