@@ -20,8 +20,8 @@ public class Event {
     private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "hallId")
-    private Long hallId;
+    @JoinColumn(name = "hall")
+    private Hall hall;
 
     private String name;
     private String description;
