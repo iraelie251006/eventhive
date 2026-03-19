@@ -18,8 +18,11 @@ public class Ticket {
     @JoinColumn(name = "userId")
     private Long userId;
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "eventSeatId")
     private EventSeat eventSeatId;
+
+    @Enumerated(EnumType.STRING)
     private TicketStatus status;
     private LocalDateTime createdAt;
 }

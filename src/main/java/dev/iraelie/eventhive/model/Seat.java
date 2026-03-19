@@ -20,7 +20,9 @@ public class Seat {
 
     @OneToMany(mappedBy = "seat", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<EventSeat> eventSeats;
-    private int rowNumber;
-    private int seatNumber;
-    private String section;
+
+    private String seatNumber;
+
+    @Enumerated(EnumType.STRING)
+    private SectionCategory section;
 }

@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Getter
 @Setter
@@ -14,8 +15,8 @@ public class EventSeat {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
-    private Ticket ticketId;
+    @OneToMany(mappedBy = "eventSeat", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Ticket> ticketId;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
     @JoinColumn(name = "seatId")
@@ -25,6 +26,7 @@ public class EventSeat {
     @JoinColumn(name = "eventId")
     private Event eventId;
 
+    @Enumerated(EnumType.STRING)
     private EventSeatStatus status;
     private BigDecimal price;
 }
