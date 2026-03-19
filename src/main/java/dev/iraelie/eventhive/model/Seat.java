@@ -14,9 +14,9 @@ public class Seat {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "hallId")
-    private Hall hallId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "hall")
+    private Hall hall;
 
     @OneToMany(mappedBy = "seat", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<EventSeat> eventSeats;
