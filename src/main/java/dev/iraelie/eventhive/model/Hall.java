@@ -14,15 +14,15 @@ public class Hall {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "venueId")
-    private Long venueId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "venue")
+    private Venue venue;
 
-    @OneToMany(mappedBy = "hallId", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
-    private Long eventId;
+    @OneToMany(mappedBy = "hall", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+    private List<Event> event;
 
     private String name;
 
-    @OneToMany(mappedBy = "hallId", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "hall", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Seat> seats;
 }
