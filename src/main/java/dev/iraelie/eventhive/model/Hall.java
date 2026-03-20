@@ -25,4 +25,6 @@ public class Hall {
 
     @OneToMany(mappedBy = "hall", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Seat> seats;
+
+    //    Will add bidirectional sync
 }
