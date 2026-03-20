@@ -25,4 +25,6 @@ public class Ticket {
     @Enumerated(EnumType.STRING)
     private TicketStatus status;
     private LocalDateTime createdAt;
+
+    //    Will add bidirectional sync
 }
