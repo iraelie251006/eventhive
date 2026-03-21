@@ -28,6 +28,4 @@ public class Event {
     private LocalDate date;
     private LocalTime timeStart;
     private LocalTime timeEnd;
-
-    //    Will add bidirectional sync
 }
