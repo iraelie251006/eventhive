@@ -25,6 +25,4 @@ public class Seat {
 
     @Enumerated(EnumType.STRING)
     private SectionCategory section;
-
-//    Will add bidirectional sync
 }
