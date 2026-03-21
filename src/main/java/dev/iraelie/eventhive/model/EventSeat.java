@@ -29,6 +29,4 @@ public class EventSeat {
     @Enumerated(EnumType.STRING)
     private EventSeatStatus status;
     private BigDecimal price;
-
-    //    Will add bidirectional sync
 }
