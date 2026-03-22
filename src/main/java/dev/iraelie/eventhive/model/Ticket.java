@@ -15,11 +15,11 @@ public class Ticket {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user")
+    @JoinColumn(name = "user_id")
     private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "event_seat")
+    @JoinColumn(name = "event_seat_id")
     private EventSeat eventSeat;
 
     @Enumerated(EnumType.STRING)
