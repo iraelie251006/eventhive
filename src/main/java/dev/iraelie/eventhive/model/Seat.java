@@ -15,7 +15,7 @@ public class Seat {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "hall")
+    @JoinColumn(name = "hall_id")
     private Hall hall;
 
     @OneToMany(mappedBy = "seat", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
