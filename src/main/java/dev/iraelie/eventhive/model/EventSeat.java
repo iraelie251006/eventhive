@@ -16,15 +16,15 @@ public class EventSeat {
     private Long id;
 
     @OneToMany(mappedBy = "eventSeat", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Ticket> ticketId;
+    private List<Ticket> tickets;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "seatId")
-    private Seat seatId;
+    @JoinColumn(name = "seat_id")
+    private Seat seat;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "eventId")
-    private Event eventId;
+    @JoinColumn(name = "event_id")
+    private Event event;
 
     @Enumerated(EnumType.STRING)
     private EventSeatStatus status;
