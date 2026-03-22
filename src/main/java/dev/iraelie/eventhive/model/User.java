@@ -26,5 +26,5 @@ public class User {
     private Set<Ticket> tickets;
 
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private Set<Event> userEvent;
+    private Set<Event> events;
 }
