@@ -15,11 +15,11 @@ public class Hall {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "venue")
+    @JoinColumn(name = "venue_id")
     private Venue venue;
 
     @OneToMany(mappedBy = "hall", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
-    private List<Event> event;
+    private List<Event> events;
 
     private String name;
 
