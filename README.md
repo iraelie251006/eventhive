@@ -15,3 +15,5 @@ I learnt that Java is always pass-by-value
 Learnt about Metaspace that it replaced PermGen initially.
 
 effects of mutation and reassigning objects
+
+byte, short, char being promoted to at least int
