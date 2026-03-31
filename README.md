@@ -11,3 +11,5 @@ Stack(LIFO)
 Heap(FIFO)
 
 I learnt that Java is always pass-by-value
+
+Learnt about Metaspace that it replaced PermGen initially.
