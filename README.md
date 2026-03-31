@@ -9,3 +9,5 @@ JVM: Java Virtual Machine
 I learnt about JVM memory model(stack, heap)
 Stack(LIFO)
 Heap(FIFO)
+
+I learnt that Java is always pass-by-value
