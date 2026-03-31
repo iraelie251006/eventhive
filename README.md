@@ -5,3 +5,7 @@ Today I learnt to explain clearly JDK, JRE, JVM.
 JDK: Java Development Kit
 JRE: Java Runtime Environment
 JVM: Java Virtual Machine
+
+I learnt about JVM memory model(stack, heap)
+Stack(LIFO)
+Heap(FIFO)
