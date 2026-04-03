@@ -19,7 +19,11 @@ effects of mutation and reassigning objects
 byte, short, char being promoted to at least int
 
 learnt inheritance
+
 learnt composition
+
 learnt abstraction
+
 learnt encapsulation
+
 learnt linux commands
