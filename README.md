@@ -22,3 +22,4 @@ learnt inheritance
 learnt composition
 learnt abstraction
 learnt encapsulation
+learnt linux commands
