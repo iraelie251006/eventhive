@@ -29,3 +29,5 @@ learnt encapsulation
 learnt linux commands
 
 learned about SOLID principles
+
+learned about Singleton pattern
