@@ -35,3 +35,5 @@ learned about Singleton pattern
 learned about Builder pattern
 
 learned about Object lifecycle
+
+learned about Liskov Substitution principle
