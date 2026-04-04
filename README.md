@@ -27,3 +27,5 @@ learnt abstraction
 learnt encapsulation
 
 learnt linux commands
+
+learned about SOLID principles
