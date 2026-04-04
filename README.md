@@ -33,3 +33,5 @@ learned about SOLID principles
 learned about Singleton pattern
 
 learned about Builder pattern
+
+learned about Object lifecycle
