@@ -12,7 +12,7 @@ import java.util.Set;
 @Service
 @RequiredArgsConstructor
 @Slf4j
-public class VenueServiceImpl implements VenueService {
+public class VenueServiceImpl implements VenueInterface {
     private final VenueRepository venueRepository;
 
     @Override
