@@ -8,6 +8,8 @@ import java.time.LocalTime;
 
 @Getter
 @Setter
+@Builder
+@AllArgsConstructor
 @NoArgsConstructor
 @Entity
 public class Event {
