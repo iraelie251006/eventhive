@@ -33,5 +33,6 @@ public class User {
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Set<Event> events;
 
+    @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;
 }
