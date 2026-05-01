@@ -3,6 +3,7 @@ package dev.iraelie.eventhive.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.Set;
 
 @Getter
@@ -31,4 +32,6 @@ public class User {
 
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Set<Event> events;
+
+    private LocalDateTime createdAt;
 }
